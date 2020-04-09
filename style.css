@@ -1,0 +1,130 @@
+body {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+#text-box {
+    margin: 50px auto;
+    height: 250px;
+    width: 1010px;
+    resize: none;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid rgb(187, 187, 187, 0.9);
+}
+
+.keybord {  
+    position: relative;
+    max-width: 960px;
+    border: 1px solid rgb(187, 187, 187, 0.7);
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 7px;
+}
+
+.button {
+    border: 1px solid rgb(187, 187, 187, 0.9);
+    min-width: 45px;
+    padding-top: 10px;
+    height: 30px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.info {
+    border: 1px solid rgb(187, 187, 187, 0.7);
+    border-radius: 7px;
+    margin: 0px auto;
+    width: 350px;
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.active {
+    background: blue;
+    font-weight: 700;
+    color: white;
+    opacity: 0.6;
+}
+
+#Backspace {
+    width: 100px;
+}
+
+#Delete {
+    width: 50px;
+}
+
+#Tab {
+    width: 55px;
+}
+
+#Backslash {
+    width: 45px;
+}
+
+#CapsLock {
+    width: 85px;
+}
+
+#Enter {
+    width: 100px;
+}
+
+#ShiftLeft {
+    width: 110px;
+}
+
+#Space {
+    width: 350px;
+    left: 62px;
+}
+
+.clearfix {
+    width: 350px;
+    left: 61px;
+}
+
+#ArrowUp {
+    left: 64;
+}
+
+#ControlLeft {
+    top: 60;
+    left: -832;
+}
+
+#MetaLeft {
+    top: 60;
+    left: -824;
+}
+
+#AltLeft {
+    left: 142;
+}
+
+#ArrowLeft {
+    left: 167;
+}
+#ArrowDown {
+    left: 84;
+}
+
+#ArrowUp,
+#ControlLeft,
+#MetaLeft,
+#AltLeft,
+#Space,
+#ArrowLeft,
+#ArrowDown,
+#ArrowRight {
+    position: relative;
+}
