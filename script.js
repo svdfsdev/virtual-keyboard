@@ -65,8 +65,9 @@ document.addEventListener('keydown', event => {
         activeButtonOn(physicalButton);
     }
 
-    if ( (event.ctrlKey && event.key === alt) || (event.altKey && event.key === ctrl) ) {
+    if ( event.shiftKey && event.key === alt ) {
         changeLanguage();
+        capsLock();
     }
 
     if ( event.code === shift && !event.repeat ) {
@@ -166,7 +167,7 @@ function createPage() {
     document.body.insertAdjacentHTML('beforeend',
     `<textarea name="" id="text-box" placeholder="Input text please..."></textarea>
                                   <div class="keybord"></div>
-                                  <div class="info">Переключение языка : Alt + Ctrl или Ctrl + Alt<br>Выполнено в Win 10</div>`);
+                                  <div class="info">Переключение языка : Shift + Alt<br>Выполнено в Win 10</div>`);
 }
 
 function createButtonsCollection() {
