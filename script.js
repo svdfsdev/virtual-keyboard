@@ -22,6 +22,19 @@ const buttons = [["Backquote", "`", "ё", "~"], ["Digit1", "1", "1", "!"], ["Dig
                     ["ArrowDown", "&#8595;",  "&#8595;"], ["ArrowRight", "&#8594;", "&#8594;"]
                     ];
 
+const alt = "Alt";
+const ctrl = "Control";
+const shift = "ShiftLeft";
+const tab = "Tab";
+const caps = "CapsLock";
+const space = 'Space';
+const enter = 'Enter';
+const arrowLeft = 'ArrowLeft';
+const arrowRight = 'ArrowRight';
+const arrowUp = 'ArrowUp';
+const arrowDown = 'ArrowDown';
+const del = 'Delete';
+const backspace = 'Backspace';
 
 createPage();
 
@@ -50,16 +63,16 @@ document.addEventListener('keydown', event => {
         activeButtonOn(physicalButton);
     }
 
-    if ( (event.ctrlKey && event.key === "Alt") || (event.altKey && event.key === "Control") ) {
+    if ( (event.ctrlKey && event.key === alt) || (event.altKey && event.key === ctrl) ) {
         changeLanguage();
     }
 
-    if ( event.code === "ShiftLeft" && !event.repeat ) {
+    if ( event.code === shift && !event.repeat ) {
         showShiftLetters("Shift");
         capsLock();
     }
 
-    if ( event.code === "Tab" ) {
+    if ( event.code ===  tab) {
         event.preventDefault();
         inputText('    ');
     }
@@ -75,11 +88,11 @@ document.addEventListener('keyup', event => {
         activeButtonOff(physicalButton);
     }
 
-    if ( event.code === "CapsLock" ) {
+    if ( event.code === caps ) {
         capsLock();
     }
 
-    if ( event.code === "ShiftLeft" ) {
+    if ( event.code === shift ) {
         showShiftLetters("");
         capsLock();
     }
@@ -95,36 +108,36 @@ KEYBORD.addEventListener('mousedown', event => {
         activeButtonOn(event.target);
 
         switch (event.target.id) {
-            case 'ShiftLeft':
+            case shift:
                 showShiftLetters("Shift");
                 capsLock();
                 break;
-            case 'CapsLock':
+            case caps:
                 capsLock();
                 break;
-            case 'Tab':
+            case tab:
                 inputText('    ');
                 break;
-            case 'Space':
+            case space:
                 inputText(' ');
                 break;
-            case 'Enter':
+            case enter:
                 inputText('\n');
                 break;
-            case 'ArrowLeft':
+            case arrowLeft:
                 cursorLeftRight(-1);
                 break;
-            case 'ArrowRight':    
+            case arrowRight:    
                 cursorLeftRight(1);
                 break;
-            case 'Delete':
+            case del:
                 delet(1);
                 break;
-            case 'Backspace':
+            case backspace:
                 delet(-1);
                 break;
-            case 'ArrowUp':
-            case 'ArrowDown':
+            case arrowUp:
+            case arrowDown:
             default:
                 inputText(event.target.innerText);
                 break;
@@ -136,7 +149,7 @@ KEYBORD.addEventListener('mouseup', event => {
 
     activeButtonOff(event.target);
     switch (event.target.id) {
-        case 'ShiftLeft':
+        case shift:
             showShiftLetters("");
             capsLock();
             break;   
