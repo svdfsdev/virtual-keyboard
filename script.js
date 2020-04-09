@@ -42,7 +42,9 @@ const KEYBORD = document.querySelector('.keybord');
 const EDITOR = document.querySelector('#text-box');
 const buttonCollection = new Map();
 
-localStorage.setItem('language', 'en');
+let language = 'en';
+
+localStorage.setItem(language, 'en');
 
 createButtonsCollection();
 
